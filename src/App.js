@@ -1,25 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import TextAutoComplete from './TextAutoComplete';
 
 function App() {
+  const keyWords =  ["sin()", "cos()", "exp()", "tan()", "var1", "var2", "func1()"]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="textbox">
+      <h3>Editor</h3>
+      <TextAutoComplete func_list={keyWords}/>
     </div>
-  );
+  ); 
 }
 
 export default App;
